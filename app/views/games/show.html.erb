@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @game.player_id %>
+</p>
+
+<p>
+  <strong>Opponent:</strong>
+  <%= @game.opponent_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @game.state %>
+</p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @game.winner %>
+</p>
+
+<p>
+  <strong>Current player:</strong>
+  <%= @game.current_player %>
+</p>
+
+<p>
+  <strong>Is waiting:</strong>
+  <%= @game.is_waiting %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

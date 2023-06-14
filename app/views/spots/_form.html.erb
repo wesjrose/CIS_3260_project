@@ -1,0 +1,47 @@
+<%= form_with(model: spot) do |form| %>
+  <% if spot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spot.errors.count, "error") %> prohibited this spot from being saved:</h2>
+
+      <ul>
+        <% spot.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :x_coord %>
+    <%= form.text_field :x_coord %>
+  </div>
+
+  <div class="field">
+    <%= form.label :y_coord %>
+    <%= form.number_field :y_coord %>
+  </div>
+
+  <div class="field">
+    <%= form.label :piece_id %>
+    <%= form.number_field :piece_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_id %>
+    <%= form.number_field :game_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adj_horiz_spot %>
+    <%= form.text_field :adj_horiz_spot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adj_vert_spot %>
+    <%= form.text_field :adj_vert_spot %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  x_coord: MyString
+  y_coord: 1
+  piece_id: 1
+  game_id: 1
+  adj_horiz_spot: MyString
+  adj_vert_spot: MyString
+
+two:
+  x_coord: MyString
+  y_coord: 1
+  piece_id: 1
+  game_id: 1
+  adj_horiz_spot: MyString
+  adj_vert_spot: MyString

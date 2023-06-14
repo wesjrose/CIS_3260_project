@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @player.nickname %>
+</p>
+
+<p>
+  <strong>Piece on board:</strong>
+  <%= @player.piece_on_board %>
+</p>
+
+<p>
+  <strong>Piece pile:</strong>
+  <%= @player.piece_pile %>
+</p>
+
+<p>
+  <strong>Num pieces captured:</strong>
+  <%= @player.num_pieces_captured %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @player.colour != "" ? @player.colour : "N/A" %>
+</p>
+
+<p>
+  <strong>Is waiting:</strong>
+  <%= @player.is_waiting? ? @player.is_waiting : "N/A" %>
+</p>
+
+<%= link_to 'Back', players_path %>

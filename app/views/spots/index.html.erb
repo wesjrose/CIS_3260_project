@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Spot ID</th>
+      <th>X coord</th>
+      <th>Y coord</th>
+      <th>Piece</th>
+      <th>Game</th>
+      <th>Adj horiz spot</th>
+      <th>Adj vert spot</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spots.each do |spot| %>
+      <tr>
+        <td><%= spot.id %></td>
+        <td><%= spot.x_coord %></td>
+        <td><%= spot.y_coord %></td>
+        <td><%= spot.piece_id %></td>
+        <td><%= spot.game_id %></td>
+        <td><%= spot.adj_horiz_spot %></td>
+        <td><%= spot.adj_vert_spot %></td>
+        <td><%= link_to 'Show', spot %></td>
+        <td><%= link_to 'Edit', edit_spot_path(spot) %></td>
+        <td><%= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spot', new_spot_path %>

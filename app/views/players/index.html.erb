@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Players</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player ID</th>
+      <th>Nickname</th>
+      <th>Piece on board</th>
+      <th>Piece pile</th>
+      <th>Num pieces captured</th>
+      <th>Colour</th>
+      <th>Is waiting</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.id %></td>
+        <td><%= player.nickname %></td>
+        <td><%= player.piece_on_board %></td>
+        <td><%= player.piece_pile %></td>
+        <td><%= player.num_pieces_captured %></td>
+        <td><%= player.colour != "" ? player.colour : "N/A" %></td>
+        <td><%= player.is_waiting? ? player.is_waiting : "N/A" %></td>
+        <td><%= link_to 'Show', player %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %> |

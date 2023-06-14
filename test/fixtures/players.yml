@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  nickname: MyString
+  piece_on_board: 1
+  piece_pile: 1
+  num_pieces_captured: 1
+  colour: MyString
+  is_waiting: false
+
+two:
+  player_id: 1
+  nickname: MyString
+  piece_on_board: 1
+  piece_pile: 1
+  num_pieces_captured: 1
+  colour: MyString
+  is_waiting: false

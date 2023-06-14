@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Piece ID:</strong>
+  <%= @piece.id %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @piece.player_id %>
+</p>
+
+<p>
+  <strong>Spot:</strong>
+  <%= @piece.spot_id %>
+</p>
+
+<%= link_to 'Edit', edit_piece_path(@piece) %> |
+<%= link_to 'Back', pieces_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spot ID:</strong>
+  <%= @spot.id %>
+</p>
+
+<p>
+  <strong>X coord:</strong>
+  <%= @spot.x_coord %>
+</p>
+
+<p>
+  <strong>Y coord:</strong>
+  <%= @spot.y_coord %>
+</p>
+
+<p>
+  <strong>Piece:</strong>
+  <%= @spot.piece_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @spot.game_id %>
+</p>
+
+<p>
+  <strong>Adj horiz spot:</strong>
+  <%= @spot.adj_horiz_spot %>
+</p>
+
+<p>
+  <strong>Adj vert spot:</strong>
+  <%= @spot.adj_vert_spot %>
+</p>
+
+<%= link_to 'Edit', edit_spot_path(@spot) %> |
+<%= link_to 'Back', spots_path %>

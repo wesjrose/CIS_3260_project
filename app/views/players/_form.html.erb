@@ -1,0 +1,47 @@
+<%= form_with(model: player) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+        <% player.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :piece_on_board %>
+    <%= form.text_field :piece_on_board %>
+  </div>
+
+  <div class="field">
+    <%= form.label :piece_pile %>
+    <%= form.number_field :piece_pile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_pieces_captured %>
+    <%= form.number_field :num_pieces_captured %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colour %>
+    <%= form.text_field :colour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_waiting %>
+    <%= form.check_box :is_waiting %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
